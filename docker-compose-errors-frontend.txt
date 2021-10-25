@@ -1,0 +1,25 @@
+udagram$ docker-compose up
+Creating network "udagram_default" with the default driver
+Creating udagram_backend-feed_1 ... done
+Creating udagram_backend-user_1 ... done
+Creating udagram_frontend_1     ... done
+Creating udagram_reverseproxy_1 ... done
+Attaching to udagram_backend-user_1, udagram_backend-feed_1, udagram_frontend_1, udagram_reverseproxy_1
+frontend_1      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+frontend_1      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+frontend_1      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+frontend_1      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+frontend_1      | /docker-entrypoint.sh: Configuration complete; ready for start up
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: using the "epoll" event method
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: nginx/1.21.3
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424)
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker processes
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 34
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 35
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 36
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 37

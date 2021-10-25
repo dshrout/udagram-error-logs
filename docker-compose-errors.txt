@@ -1,0 +1,109 @@
+udagram$ docker-compose up
+Creating network "udagram_default" with the default driver
+Creating udagram_backend-feed_1 ... done
+Creating udagram_backend-user_1 ... done
+Creating udagram_frontend_1     ... done
+Creating udagram_reverseproxy_1 ... done
+Attaching to udagram_backend-user_1, udagram_backend-feed_1, udagram_frontend_1, udagram_reverseproxy_1
+backend-feed_1  |
+backend-feed_1  | > udagram-api@2.0.0 prod /usr/src/app
+backend-feed_1  | > node ./www/server.ts
+backend-feed_1  |
+backend-feed_1  | internal/modules/cjs/loader.js:818
+backend-feed_1  |   throw err;
+backend-feed_1  |   ^
+backend-feed_1  |
+backend-feed_1  | Error: Cannot find module '/usr/src/app/www/server.ts'
+backend-feed_1  |     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+backend-feed_1  |     at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+backend-feed_1  |     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+backend-feed_1  |     at internal/main/run_main_module.js:17:47 {
+backend-feed_1  |   code: 'MODULE_NOT_FOUND',
+backend-feed_1  |   requireStack: []
+backend-feed_1  | }
+frontend_1      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+frontend_1      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+backend-user_1  |
+backend-user_1  | > udagram-api@2.0.0 prod /usr/src/app
+backend-user_1  | > node ./www/server.ts
+backend-user_1  |
+backend-feed_1  | npm ERR! code ELIFECYCLE
+reverseproxy_1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+reverseproxy_1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+backend-feed_1  | npm ERR! errno 1
+backend-feed_1  | npm ERR! udagram-api@2.0.0 prod: `node ./www/server.ts`
+reverseproxy_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+backend-user_1  | internal/modules/cjs/loader.js:818
+backend-user_1  |   throw err;
+backend-user_1  |   ^
+backend-user_1  |
+backend-user_1  | Error: Cannot find module '/usr/src/app/www/server.ts'
+backend-user_1  |     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+backend-user_1  |     at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+backend-user_1  |     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+backend-user_1  |     at internal/main/run_main_module.js:17:47 {
+backend-user_1  |   code: 'MODULE_NOT_FOUND',
+backend-user_1  |   requireStack: []
+backend-user_1  | }
+reverseproxy_1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+backend-feed_1  | npm ERR! Exit status 1
+backend-feed_1  | npm ERR!
+backend-user_1  | npm ERR! code ELIFECYCLE
+backend-user_1  | npm ERR! errno 1
+backend-user_1  | npm ERR! udagram-api@2.0.0 prod: `node ./www/server.ts`
+backend-user_1  | npm ERR! Exit status 1
+backend-user_1  | npm ERR!
+backend-user_1  | npm ERR! Failed at the udagram-api@2.0.0 prod script.
+backend-user_1  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+backend-user_1  |
+backend-user_1  | npm ERR! A complete log of this run can be found in:
+backend-user_1  | npm ERR!     /root/.npm/_logs/2021-10-25T16_55_48_531Z-debug.log
+backend-feed_1  | npm ERR! Failed at the udagram-api@2.0.0 prod script.
+backend-feed_1  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+frontend_1      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+frontend_1      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+reverseproxy_1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+reverseproxy_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+backend-feed_1  | 
+backend-feed_1  | npm ERR! A complete log of this run can be found in:
+backend-feed_1  | npm ERR!     /root/.npm/_logs/2021-10-25T16_55_48_904Z-debug.log
+udagram_backend-user_1 exited with code 1
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+frontend_1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+reverseproxy_1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+frontend_1      | /docker-entrypoint.sh: Configuration complete; ready for start up
+udagram_backend-feed_1 exited with code 1
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: using the "epoll" event method
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: nginx/1.21.3
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424)
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+reverseproxy_1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker processes
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 34
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 35
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 36
+frontend_1      | 2021/10/25 16:55:48 [notice] 1#1: start worker process 37
+reverseproxy_1  | 2021/10/25 16:55:50 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | 2021/10/25 16:55:58 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:06 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:14 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:21 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:29 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:39 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+udagram_reverseproxy_1 exited with code 1
+reverseproxy_1  | 2021/10/25 16:56:51 [emerg] 1#1: host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7
+reverseproxy_1  | nginx: [emerg] host not found in upstream "backend-user:8080" in /etc/nginx/nginx.conf:7

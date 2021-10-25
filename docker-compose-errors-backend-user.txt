@@ -1,0 +1,34 @@
+udagram$ docker-compose up
+Creating network "udagram_default" with the default driver
+Creating udagram_backend-feed_1 ... done
+Creating udagram_backend-user_1 ... done
+Creating udagram_frontend_1     ... done
+Creating udagram_reverseproxy_1 ... done
+Attaching to udagram_backend-user_1, udagram_backend-feed_1, udagram_frontend_1, udagram_reverseproxy_1
+backend-user_1  |
+backend-user_1  | > udagram-api@2.0.0 prod /usr/src/app
+backend-user_1  | > node ./www/server.ts
+backend-user_1  |
+backend-user_1  | internal/modules/cjs/loader.js:818
+backend-user_1  |   throw err;
+backend-user_1  |   ^
+backend-user_1  |
+backend-user_1  | Error: Cannot find module '/usr/src/app/www/server.ts'
+backend-user_1  |     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+backend-user_1  |     at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+backend-user_1  |     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+backend-user_1  |     at internal/main/run_main_module.js:17:47 {
+backend-user_1  |   code: 'MODULE_NOT_FOUND',
+backend-user_1  |   requireStack: []
+backend-user_1  | }
+backend-user_1  | npm ERR! code ELIFECYCLE
+backend-user_1  | npm ERR! errno 1
+backend-user_1  | npm ERR! udagram-api@2.0.0 prod: `node ./www/server.ts`
+backend-user_1  | npm ERR! Exit status 1
+backend-user_1  | npm ERR!
+backend-user_1  | npm ERR! Failed at the udagram-api@2.0.0 prod script.
+backend-user_1  | npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+backend-user_1  |
+backend-user_1  | npm ERR! A complete log of this run can be found in:
+backend-user_1  | npm ERR!     /root/.npm/_logs/2021-10-25T16_55_48_531Z-debug.log
+udagram_backend-user_1 exited with code 1
